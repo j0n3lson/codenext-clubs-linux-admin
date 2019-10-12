@@ -1,24 +1,23 @@
-# Suggested Solutions and notes
 
-## Basic File Operations
-
-These levels focus on how to find files, list directories, and view file
-properties.
-
-### Level 0:
+# Level 0 Solution
 
 This level is mainly about connecting to the remote server. The server is
 just a computer that is somone on the network (or internet if you will). We
 use the `ssh` a commmand that lets use login to the remote server. There's a few
 important concepts to understand, let's break down the command a bit more:
 
-**What is the `ssh` command?**
+## What is the `ssh` command?
+
+### Command Demo: SSH into level0
+![SSH demo](img/ssh.gif)
+
+### Command Breakdown
 
 The command looks like this:
 
 ```
 # A basic ssh command
-ssh $USERNAME@$HOSTNAME -p $PORT
+ssh $USERNAME@$SERVER_NAME -p $PORT
 
 # Example from level0:
 
@@ -31,17 +30,19 @@ ssh bandit0@bandit.labs.overthewire.org -p 2220
 ````
 Where:
 
-* *$USERNAME*: Is the username to login with (here `bandit0`)
-* *$SERVER_NAME*: Is the server's name or IP address (here `bandit.labs.overthewire.org`)
+* _$USERNAME_: Is the username to login with (here `bandit0`)
+* _$SERVER_NAME_: Is the server's name or IP address (here `bandit.labs.overthewire.org`)
 
-* *$PORT*: Is the service port to connect on (here `2220`). More on this in a bit.
+* _$PORT_: Is the service port to connect on (here `2220`). More on this in a bit.
 
-**What is a `server` what is a `port`?**
+## What is a `server` what is a `port`?
 
-A `server` is just a computer that lives somewhere-- Your laptop can be a
-server. All `servers` run software called `services`, these `services` do
-things like provide a web page (also called a *web server*) or provide access
-to files (e.g. a *file server*).
+A *server* is just a computer that lives somewhere-- Your laptop can be a
+server. All servers run software called *services*, these services do
+things like provide a web page (i.e. a *web server*) or provide access
+to files (i.g. a *file server*).
+
+### Command Demo: Finding a Server's IP address
 
 In order to talk a `server` you need to know it's `hostname` or `IP address`.
 A server can have more than one hostname or IP address as we'll see in a sec.
@@ -50,6 +51,8 @@ You can find out a servers IP address with the `nslookup` command. For
 example:
 
 ![nslookup demo](img/nslookup.gif)
+
+### Command Breakdown 
 
 ```
 nslookup bandit.labs.overthewire.org
