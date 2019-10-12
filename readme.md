@@ -60,11 +60,4 @@ Once logged in, you can ssh to any level you know the password for:
 
 `ssh $USERNAME@localhost`
 
-Try to answer the following questions:
-
-1. What is the `ssh` command used for?
-2. What is the `-p` flag used for?
-3. What is `localhost`?
-4. Once you are logged into a level, why don't you have to give the `-p` flag to log into another level?
-
 # HAPPY HACKING!!!
