@@ -51,9 +51,9 @@ systems have a concept of "streams" which programs use to commmunicate:
 
 ```
 
-|----------|					 |----------|
+|----------|                     |----------|
 | Program1 | <---- Stream ---- > | Program2 |
-|----------|					 |----------|
+|----------|                     |----------|
 ```
 
 This *stream* is actually a *datastream* and programs can put ... *data* in
@@ -66,9 +66,9 @@ Whenever you run a command, the system sets up three standard streams between
 the command you just ran and the `shell` (i.e. the terminal). After you hit `enter` on your keyboard, the system runs the command, and connects the `shell` and the command:
 
 ```
-|----------|					       |----------|
-| shell    | stdout <---- Stream ----  |    cat   |
-|----------|					 	   |----------|
+|----------|                          |----------|
+| shell    | stdout <---- Stream ---- |    cat   |
+|----------|                          |----------|
 ```
 
 ##### How programs talk
@@ -87,12 +87,12 @@ Now that you understand `stdout`, the `stderr` stream should be easy to understa
 The last stream `stdin` is used to get input from other programs. The simplest use-case is getting info from the keyboard. When you type a key, the system actually reads data from the keyboard hardware and then writes that data to the `stdin` stream of the active program, in our case, the `shell`.
 
 ```
-|------------|		 |------------|			       |----------|
+|------------|       |------------|                |----------|
 | keyboard   | ----> | Operating  | --- stdin ---> |  shell   |  ---> Your Eyeballz
-| (hardware) |	^	 |  System|   | 	 ^	       | 		  |
+| (hardware) |  ^    |  System|   |      ^         |          |
 |------------|  |    |------------|      |         |----------|
-		  		|						 |
-		   data: 'foo'				  data: 'foo'
+                |                        |
+               data: 'foo'              data: 'foo'
 ```
 
 ## <a name='LearnMore'></a>Learn More
