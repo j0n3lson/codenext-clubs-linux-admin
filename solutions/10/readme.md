@@ -16,6 +16,7 @@ This level is a short one but introduces basic concepts of cryptography.
 * [Learning Byte: Cryptography](#LearningByte:Cryptography)
 	* [What is Cryptography all about?](#WhatisCryptographyallabout)
 	* [How `base64` encoding helps ensure message integrity](#Howbase64encodinghelpsensuremessageintegrity)
+	* [Applications of Cryptography](#ApplicationsofCryptography)
 * [Discussion Points](#DiscussionPoints)
 * [Learn More](#LearnMore)
 
@@ -39,8 +40,11 @@ the `-d or --decode` flag which takes encoded data and decodes it.
 
 You can't *decode* data that hasn't already been *encoded*:
 
-```shell
+```bash
+# First let's create a file with some content"
 tmp$ echo "there is some content" > test1.txt
+
+# Try to decode it? No joy!
 /tmp$ base64 -d test1.txt
 ��base64: invalid input
 ```
@@ -48,7 +52,7 @@ tmp$ echo "there is some content" > test1.txt
 If the input data is different, the resulting *encoding* (or output) will be
 different:
 
-```shell
+```bash
 /tmp$ echo "here is some more content" > test2.txt
 /tmp$ cat test1.txt
 there is some content
@@ -68,7 +72,7 @@ It doesn't care if the file contains data or text, encoding will produce a
 string either way. It also doesn't care about size, here we have an 8K data
 file:
 
-```shell
+```bash
 
 # Here's an 8KB file
 jnelso@jnelso-glaptop2:/tmp$ du -h randomfile.txt 
@@ -114,17 +118,17 @@ communications using codes.
 
 Generally, cryptography is focused on 4 key areas:
 
-1. Confidentiality: If Bob sent a message to Alice then *only* Alice should
+1. **Confidentiality**: If Bob sent a message to Alice then *only* Alice should
 be able to read it.
 
-2. Integrity: If Bob sends a message, Alice needs to be sure that someone
+2. **Integrity**: If Bob sends a message, Alice needs to be sure that someone
 else didn't change the message (either when it was sent over the network or
 when it was stored on a computer someplace).
 
-3. Non-Repudidation: If Alice sends a message to Bob, she shouldn't be able
+3. **Non-Repudidation**: If Alice sends a message to Bob, she shouldn't be able
 to claim later that it wasn't her who sent it.
 
-4. Authentication: Both Bob and Alice should be able to confirm each other's
+4. **Authentication**: Both Bob and Alice should be able to confirm each other's
 identity when talking to each other.
 
 Confidentiality and Integrity and integrity are among the most important
@@ -150,13 +154,27 @@ get's the message, she base64 encodes the message and then compares the
 string to the one Bob gave her. If they match, the message is the same,
 otherwise, something changed.
 
+### <a name='ApplicationsofCryptography'></a>Applications of Cryptography
+
+Cryptographic solutions are literally everywhere. Here are just a few places
+you'll see it show up:
+
+* **Confidentiality with WIFI**: The data you send via WIFI is encrypted with
+[AES](https://www.comparitech.com/blog/information-security/wpa2-aes-tkip/).
+
+* **Non-Repudiation in Bitcoin**: ECDSA is used to [secure Bitcoin](https://en.bitcoin.it/wiki/Elliptic_Curve_Digital_Signature_Algorithm)
+
+* **Authentication for Webservers**: It underlies [SSL (Secure Sockets Layer)](https://www.digicert.com/ssl/) which help secure web servers (e.g. http**s** vs http).
+
+* **JWT for Web Auth and Integrity**: JWT or [JSON Web Tokens](https://auth0.com/learn/json-web-tokens/) are used to to secure web apps. Specifically, cryptographically signed JWTs are sent between clients and web servers. JWT is used in lots of places, most notabely Google's [OAuth2](https://developers.google.com/identity/protocols/OpenIDConnect) which lets you "Sign in with Google". (Fun fact: JWT uses base64 encoding)
+
 ## <a name='DiscussionPoints'></a>Discussion Points
 
 Thinks about sending a text message to a friend:
 
 * Is your text message Confidential? Why? Why not?
 * Can you verify the Integrity of your text message?
-* What could change the 
+* What could affect the integrity of the text message you sent?
 
 ## <a name='LearnMore'></a>Learn More
 
