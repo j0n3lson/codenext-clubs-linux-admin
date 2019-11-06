@@ -16,7 +16,7 @@ tool.
 * [Table of Contents](#TableofContents)
 * [Completing the Level Goal](#CompletingtheLevelGoal)
 	* [Command Demo](#CommandDemo)
-	* [ (Optional) Command Breakdown](#OptionalCommandBreakdown)
+	* [Command Breakdown](#CommandBreakdown)
 * [Learning Byte: Rotating Text and the Cesaer Cypher](#LearningByte:RotatingTextandtheCesaerCypher)
 	* [How does the `tr` utility work?](#Howdoesthetrutilitywork)
 	* [The Cesear Cipher (a.k.a the *shift cipher*)](#TheCesearCiphera.k.atheshiftcipher)
@@ -47,7 +47,7 @@ TODO: Use a screen recorder like [Terminalizer](https://terminalizer.com/) or
 many *Command Demos* or *Command Breakdowns* as needed to get the point
 across.
 
-### <a name='OptionalCommandBreakdown'></a>Command Breakdown
+### <a name='CommandBreakdown'></a>Command Breakdown
 
 TODO: Breakdown each portion of a command to illustrate the command, flags, and
 important concepts.
