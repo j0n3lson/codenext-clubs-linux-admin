@@ -13,10 +13,10 @@ connecting via `ssh` to a server. Except this time, there's small twist.
 * [Table of Contents](#TableofContents)
 * [Completing the Level Goal](#CompletingtheLevelGoal)
 	* [Command Demo](#CommandDemo)
-		* [Permission DENIED: You can't haz password](#PermissionDENIED:Youcanthazpassword)
+		* [Permission DENIED - You can't haz password](#PermissionDENIED-Youcanthazpassword)
 		* [Connecting using `ssh` using a key](#Connectingusingsshusingakey)
 	* [Command Breakdown](#CommandBreakdown)
-* [Learning Byte: SSH Key Based Authentication and Cryptography](#LearningByte:SSHKeyBasedAuthenticationandCryptography)
+* [Learning Byte - SSH Key Based Authentication and Cryptography](#LearningByte-SSHKeyBasedAuthenticationandCryptography)
 	* [The Four Pillars of Cryptography](#TheFourPillarsofCryptography)
 	* [Why Cryptography Matters](#WhyCryptographyMatters)
 	* [How the `ssh` uses Cryptography for security](#HowthesshusesCryptographyforsecurity)
@@ -44,7 +44,7 @@ well.
 
 ### <a name='CommandDemo'></a>Command Demo
 
-#### <a name='PermissionDENIED:Youcanthazpassword'></a>Permission DENIED: You can't haz password
+#### <a name='PermissionDENIED-Youcanthazpassword'></a>Permission DENIED - You can't haz password
 
 The instructions point to a password in a file `/etc/bandit_pass/bandit14`
 only, you as `bandit13` do not have permissions. 
@@ -64,7 +64,7 @@ learning byte back on Level 5.
 You're all old enough here to look at the `man` page (e.g. `man ssh`) and
 find out what each flag does.
 
-## <a name='LearningByte:SSHKeyBasedAuthenticationandCryptography'></a>Learning Byte: SSH Key Based Authentication and Cryptography
+## <a name='LearningByte-SSHKeyBasedAuthenticationandCryptography'></a>Learning Byte - SSH Key Based Authentication and Cryptography
 
 ### <a name='TheFourPillarsofCryptography'></a>The Four Pillars of Cryptography
 
