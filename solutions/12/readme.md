@@ -14,6 +14,7 @@ utilities take files and make them smaller using compression algorithms.
 * [Completing the Level Goal](#CompletingtheLevelGoal)
 	* [The Basic Approach](#TheBasicApproach)
 	* [A Better Approach](#ABetterApproach)
+* [Learning Byte (TODO, Maybe)](#LearningByteTODOMaybe)
 
 <!-- vscode-markdown-toc-config
 	numbering=false
@@ -85,7 +86,22 @@ xxd -r data.txt | gunzip | bunzip2 | gunzip | tar -xf - -O | tar -xf - -O | bunz
 The password is $NOOOOOP> 
 bandit12@bandit:/tmp/jntry12$ 
 ```
-*Note: The `\` are used so that we can continue on the next line for readability.
+*Note: The `\` are used so that we can continue on the next line for readability.*
 
 This approach is a little cleaner since we never actually have to write out a
 file. This is important because, in some cases you might not want to write a file (or maybe you can't). Of course the only drawback is that we actually had to know the sequence of commands we needed to run. But what if we didn't know anything about the file?
+
+## <a name='LearningByteTODOMaybe'></a>Learning Byte (TODO, Maybe)
+
+Ideas (Simplest to Complex):
+
+* File magic: Do a hexdump of different files to demonstrate the magic byte used by the `file` command
+
+* How does the `gzip` utility work:
+	* Overview of compression: [Huffman Coding](https://www.youtube.com/watch?v=JsTptu56GM8)
+	* Overview of [Lempel-Ziv Compression (LZ77)](https://www.youtube.com/watch?v=RV5aUr8sZD0)
+	* [DEFLATE Compression](https://www.youtube.com/watch?v=jnaHNsPS0-E) ([RFC1951](https://www.ietf.org/rfc/rfc1951.txt)) uses LZ77+Huffman Coding to represent compressed data.
+	* GZIP ([RFC1952](https://www.ietf.org/rfc/rfc1952.txt)) uses DEFLATE compression format for the compressed data. Adds some additional fields for portability.
+
+*Note: This kinda gets into undergraduate CS territory. It might not be very
+*tractable for our target audience.*
