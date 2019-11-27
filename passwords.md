@@ -28,3 +28,5 @@ Level | Password | Note
 23 | jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n |
 24 | UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ |
 25 | uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG |
+26 | 5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z |
+27 | 3ba3118a22e93127a4ed485be72ef5ea |
