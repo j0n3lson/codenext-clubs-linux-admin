@@ -1,0 +1,12 @@
+commitFormat: angular
+branch:
+  master: release
+release: 'github'
+github:
+  repo: "codenext-clubs-linux-admin"
+  user: "j0n3lson"
+assets:
+  - name: ./build/go-semantic-release
+    compress: false
+  - name: ./build/go-semantic-release.exe
+    compress: false
