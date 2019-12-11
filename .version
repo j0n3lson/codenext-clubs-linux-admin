@@ -2,7 +2,7 @@ last:
   commit: ""
   version: 1.0.0
 next:
-  commit: 63e87c8d43b58bf12d7ce4779a5b48011fd10c05
+  commit: f41289a024f5d8b2566b5fb3da43146170e7d78e
   version: 0.0.1
 branch: master
 commits: {}

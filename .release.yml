@@ -10,3 +10,6 @@ assets:
     compress: false
   - name: ./build/go-semantic-release.exe
     compress: false
+changelog:
+  printAll: true
+  title: 'v{{.Version}} ({{.Now.Format "2006-01-02"}})'
