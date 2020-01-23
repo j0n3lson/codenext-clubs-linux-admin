@@ -3,7 +3,8 @@
 ## What you'll Need
 
 1. Your laptop
-2. A GitHub account
+2. Curiosity
+3. Patience
 
 ## Overview
 
@@ -34,18 +35,6 @@ This makes it easier to share your thought process (and solution!).
 
 4. Challenge yourself: Are there other solutions out there? Compare your
 solution to your lab mate!
-
-## Working with Github
-
-We'll store all of our files on Github both so you get more experience with
-Git and so I can give you feedback. In order to do that, you need to fork my
-repo. After every class, we'll save all our work on Github for later.
-
-TIP: Check out this [video](https://www.youtube.com/watch?v=f5grYMXbAV0) on
-forking
-
-TIP: Check out this [video](https://www.youtube.com/watch?v=-zvHQXnBO6c) on
-synching your changes to my Git repository.
 
 ## Connecting
 
